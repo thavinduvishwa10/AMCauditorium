@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Ave Maria Auditorium - Manager Dashboard</title>
+
+
+    <!-- Bootstrap CSS -->
+
+    <link href="Resourses/bootstrap-5.3.8-dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+
+    <!-- Bootstrap Icons -->
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css"
+          rel="stylesheet">
+
+
+    <style>
+
+        body {
+            background-color: #f5f7fa;
+        }
+
+        .carousel img {
+            height: 350px;
+            object-fit: cover;
+        }
+
+    </style>
+
+    <link rel="stylesheet" href="navbar.css">
+
+</head>
+
+
+<body>
+
+
+<!-- NAVBAR -->
+
+<nav class="navbar navbar-dark bg-primary ">
+
+    <div class="container-fluid">
+
+
+        <!-- THREE DOT BUTTON -->
+
+        <button class="btn btn-primary"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#managerMenu">
+
+            <i class="bi bi-three-dots-vertical fs-4"></i>
+
+        </button>
+
+
+
+        <!-- SYSTEM NAME -->
+
+        <span class="navbar-brand fw-bold d-flex align-items-center">
+
+            <img src="Resourses/images.jpg"
+                 alt="Ave Maria Logo"
+                 class="rounded-circle me-2"
+                 width="40"
+                 height="40">
+        
+            Ave Maria Auditorium
+        
+        </span>
+
+
+        <!-- PROFILE -->
+
+        <div class="dropdown ms-auto">
+
+            <button class="btn btn-primary dropdown-toggle"
+                    type="button"
+                    data-bs-toggle="dropdown">
+
+                <i class="bi bi-person-circle fs-4"></i>
+
+                Manager
+
+            </button>
+
+
+            <ul class="dropdown-menu dropdown-menu-end">
+
+                <li>
+
+                    <a class="dropdown-item" href="#">
+
+                        <i class="bi bi-person me-2"></i>
+
+                        My Profile
+
+                    </a>
+
+                </li>
+
+
+                
+
+                <li>
+                    <hr class="dropdown-divider">
+                </li>
+
+
+                <li>
+
+                    <a class="dropdown-item text-danger"
+                       href="login.html">
+
+                        <i class="bi bi-box-arrow-right me-2"></i>
+
+                        Logout
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+
+<!-- LEFT OFFCANVAS MENU -->
+
+<div class="offcanvas offcanvas-start" tabindex="-1" id="managerMenu">
+
+    <!-- Sidebar Header -->
+    <div class="offcanvas-header bg-primary text-white">
+
+        <div>
+            <h5 class="offcanvas-title fw-bold mb-1">
+                <i class="bi bi-building me-2"></i>
+                Ave Maria Auditorium
+            </h5>
+            <small>Manager Panel</small>
+        </div>
+
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close">
+        </button>
+
+    </div>
+
+    <!-- Sidebar Body -->
+    <div class="offcanvas-body p-0">
+
+        <div class="px-3 pt-3 pb-2">
+            <small class="text-secondary fw-semibold">MAIN MENU</small>
+        </div>
+
+        <div class="nav nav-pills flex-column gap-1 px-2">
+
+            <a href="dash.html" class="nav-link d-flex align-items-center gap-3">
+                <i class="bi bi-speedometer2 fs-5"></i>
+                Dashboard
+            </a>
+
+            <a href="facility_test.html" class="nav-link d-flex align-items-center gap-3">
+                <i class="bi bi-lightbulb fs-5"></i>
+                Facilities
+            </a>
+
+            <a href="customer.html" class="nav-link  d-flex align-items-center gap-3" aria-current="page">
+                <i class="bi bi-person-lines-fill fs-5"></i>
+                Customer Management
+            </a>
+
+            <a href="#" class="nav-link d-flex align-items-center gap-3">
+                <i class="bi bi-calendar-check fs-5"></i>
+                Reservation
+            </a>
+
+            <a href="#" class="nav-link d-flex align-items-center gap-3">
+                <i class="bi bi-calendar-check fs-5"></i>
+                Visit opintment
+            </a>
+
+            <a href="#" class="nav-link d-flex align-items-center gap-3">
+                <i class="bi bi-people fs-5"></i>
+                Staff Allocation
+            </a>
+
+            <div class="dropdown ">
+
+                <a href="#userAccessMenu"
+                   class="nav-link d-flex align-items-center gap-3"
+                   data-bs-toggle="collapse"
+                   role="button"
+                   aria-expanded="false">
+            
+                    <i class="bi bi-shield-lock fs-5"></i>
+                    User & Access Management
+                    <i class="bi bi-chevron-down ms-auto"></i>
+            
+                </a>
+            
+                <div class="collapse" id="userAccessMenu">
+            
+                    <div class="nav nav-pills flex-column gap-1 ps-4">
+            
+                        <a href="employee.html"
+                           class="nav-link d-flex align-items-center gap-3">
+                            <i class="bi bi-people fs-5"></i>
+                            Employee Management
+                        </a>
+            
+                        <a href="user.html"
+                           class="nav-link d-flex align-items-center gap-3">
+                            <i class="bi bi-person-lock fs-5"></i>
+                            User Management
+                        </a>
+            
+                        <a href="privilege.html"
+                           class="nav-link d-flex align-items-center gap-3">
+                            <i class="bi bi-shield-check fs-5"></i>
+                            Privilege Management
+                        </a>
+            
+                    </div>
+            
+                </div>
+            
+            </div>
+
+        </div>
+
+        <hr class="mx-3 my-3">
+
+        <div class="px-3 pb-2">
+            <small class="text-secondary fw-semibold">SUPPLIER MANAGEMENT</small>
+        </div>
+
+        <div class="nav nav-pills flex-column gap-1 px-2">
+
+            <a href="#" class="nav-link d-flex align-items-center gap-3">
+                <i class="bi bi-truck fs-5"></i>
+                Suppliers
+            </a>
+
+            <a href="#" class="nav-link d-flex align-items-center gap-3">
+                <i class="bi bi-clipboard-plus fs-5"></i>
+                Job Creation
+            </a>
+
+            <a href="#" class="nav-link d-flex align-items-center gap-3">
+                <i class="bi bi-clipboard-check fs-5"></i>
+                Job Completion
+            </a>
+
+            <a href="#" class="nav-link d-flex align-items-center gap-3">
+                <i class="bi bi-cash-stack fs-5"></i>
+                Supplier Payment
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+    <!-- Employee table -->
+    <div class="container-fluid p-3 p-md-4">
+
+        <div class="card shadow-sm">
+
+            <div class="card-header bg-primary text-white d-flex
+                        justify-content-between align-items-center">
+
+                <h4 class="mb-0">Employee Management</h4>
+
+
+            </div>
+
+            <div class="card-body">
+
+                <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
+
+                    <input type="search" id="searchEmployee" class="form-control w-auto"
+                        placeholder="Search employees...">
+
+                    <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal"
+                        data-bs-target="#employeeModal" id="addEmployeeBtn">
+
+                        <i class="bi bi-plus-lg me-1"></i>Add Employee
+
+                    </button>
+
+                </div>
+
+                <div class="table-responsive">
+
+                    <table class="table table-striped table-hover table-bordered align-middle mb-0">
+
+                        <thead class="table-primary">
+                            <tr>
+                                <th>#</th>
+                                <th>Full Name</th>
+                                <th>NIC</th>
+                                <th>Mobile</th>
+                                <th>Email</th>
+                                <th>Designation</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="employeeTable">
+
+                            <tr>
+                                <td>1</td>
+                                <td>Thavindu Vishwa</td>
+                                <td>200012345678</td>
+                                <td>0781234567</td>
+                                <td>thavindu@gmail.com</td>
+                                <td>Manager</td>
+                                <td><span class="badge bg-success">Working</span></td>
+                                <td class="text-center">
+                                    <div class="btn-group btn-group-sm">
+                                        <button type="button" class="btn btn-outline-primary viewBtn">View</button>
+                                        <button type="button" class="btn btn-outline-primary editBtn">Edit</button>
+                                        <button type="button" class="btn btn-outline-danger deleteBtn">Delete</button>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>2</td>
+                                <td>Kasun Perera</td>
+                                <td>199912345678</td>
+                                <td>0711234567</td>
+                                <td>kasun@gmail.com</td>
+                                <td>Cashier</td>
+                                <td><span class="badge bg-success">Working</span></td>
+                                <td class="text-center">
+                                    <div class="btn-group btn-group-sm">
+                                        <button type="button" class="btn btn-outline-primary viewBtn">View</button>
+                                        <button type="button" class="btn btn-outline-primary editBtn">Edit</button>
+                                        <button type="button" class="btn btn-outline-danger deleteBtn">Delete</button>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>3</td>
+                                <td>Tharindu Fernando</td>
+                                <td>199812345678</td>
+                                <td>0771234567</td>
+                                <td>tharindu@gmail.com</td>
+                                <td>Cashier</td>
+                                <td><span class="badge bg-secondary">Resign</span></td>
+                                <td class="text-center">
+                                    <div class="btn-group btn-group-sm">
+                                        <button type="button" class="btn btn-outline-primary viewBtn">View</button>
+                                        <button type="button" class="btn btn-outline-primary editBtn">Edit</button>
+                                        <button type="button" class="btn btn-outline-danger deleteBtn">Delete</button>
+                                    </div>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add / Edit Employee Modal -->
+    <div class="modal fade" id="employeeModal" tabindex="-1" aria-labelledby="employeeModalTitle" aria-hidden="true">
+
+        <div class="modal-dialog modal-xl modal-dialog-scrollable">
+
+            <div class="modal-content">
+
+                <div class="modal-header bg-primary text-white">
+
+                    <h5 class="modal-title" id="employeeModalTitle">
+                        <i class="bi bi-person-plus me-2"></i>Employee Registration
+                    </h5>
+
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+
+                </div>
+
+                <div class="modal-body">
+
+                    <form id="employeeForm">
+
+                        <p class="text-end text-secondary">
+                            <span class="required">*</span> Required fields
+                        </p>
+
+                        <h6 class="text-primary border-bottom pb-2 mb-3">
+                            <i class="bi bi-person-vcard me-2"></i>Personal Information
+                        </h6>
+
+                        <div class="row g-3 mb-4">
+
+                            <div class="col-md-6">
+                                <label for="empFullName" class="form-label fw-bold">
+                                    Full Name <span class="required">*</span>
+                                </label>
+                                <input type="text" id="empFullName" class="form-control"
+                                    placeholder="Enter Name EX: Thavindu Vishwa" autocomplete="name" required>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="empCallingName" class="form-label fw-bold">
+                                    Calling Name <span class="required">*</span>
+                                </label>
+                                <select id="empCallingName" class="form-select" required>
+                                    <option value="" selected disabled>Select Calling Name</option>
+                                </select>
+                                <small class="text-muted">Enter the full name first.</small>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="empInitialName" class="form-label fw-bold">
+                                    Name With Initial <span class="required">*</span>
+                                </label>
+                                <input type="text" id="empInitialName" class="form-control"
+                                    placeholder="Enter Name With Initial EX: M.A Thavindu Vishwa" required>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="empNIC" class="form-label fw-bold">
+                                    NIC <span class="required">*</span>
+                                </label>
+                                <input type="text" id="empNIC" class="form-control" placeholder="Enter NIC number"
+                                    maxlength="12" pattern="([0-9]{9}[VvXx]|[0-9]{12})"
+                                    title="Enter a valid 9-digit NIC with V/X or a 12-digit NIC." required>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="empGender" class="form-label fw-bold">
+                                    Gender <span class="required">*</span>
+                                </label>
+                                <select id="empGender" class="form-select" required>
+                                    <option value="" selected disabled>Select Gender</option>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="empDOB" class="form-label fw-bold">
+                                    Date of Birth <span class="required">*</span>
+                                </label>
+                                <input type="date" id="empDOB" class="form-control" required>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="empAge" class="form-label fw-bold">
+                                    Age <span class="required">*</span>
+                                </label>
+                                <input type="number" id="empAge" class="form-control"
+                                    placeholder="Age is calculated from date of birth" readonly required>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="empCivilStatus" class="form-label fw-bold">
+                                    Civil Status <span class="required">*</span>
+                                </label>
+                                <select id="empCivilStatus" class="form-select" required>
+                                    <option value="" selected disabled>Select Civil Status</option>
+                                    <option value="Married">Married</option>
+                                    <option value="Unmarried">Unmarried</option>
+                                </select>
+                            </div>
+
+                        </div>
+
+                        <h6 class="text-primary border-bottom pb-2 mb-3">
+                            <i class="bi bi-telephone me-2"></i>Contact Information
+                        </h6>
+
+                        <div class="row g-3 mb-4">
+
+                            <div class="col-md-6">
+                                <label for="empMobile" class="form-label fw-bold">
+                                    Mobile <span class="required">*</span>
+                                </label>
+                                <input type="tel" id="empMobile" class="form-control" placeholder="EX: 078#######"
+                                    pattern="0[0-9]{9}" title="Enter a 10-digit phone number starting with 0." required>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="empLandNumber" class="form-label fw-bold">
+                                    Land Number (optional)
+                                </label>
+                                <input type="tel" id="empLandNumber" class="form-control" placeholder="EX: 031#######"
+                                    pattern="0[0-9]{9}"
+                                    title="Enter a 10-digit phone number starting with 0, or leave blank.">
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="empEmail" class="form-label fw-bold">
+                                    Email <span class="required">*</span>
+                                </label>
+                                <input type="email" id="empEmail" class="form-control"
+                                    placeholder="EX: ThavinduVishwa@gmail.com" required>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="empAddress" class="form-label fw-bold">
+                                    Address <span class="required">*</span>
+                                </label>
+                                <textarea id="empAddress" class="form-control" rows="2"
+                                    placeholder="Enter Employee Address" required></textarea>
+                            </div>
+
+                            <div class="col-12">
+                                <label for="empNote" class="form-label fw-bold">
+                                    Note (optional)
+                                </label>
+                                <textarea id="empNote" class="form-control" rows="2"
+                                    placeholder="Enter additional notes"></textarea>
+                            </div>
+
+                        </div>
+
+                        <h6 class="text-primary border-bottom pb-2 mb-3">
+                            <i class="bi bi-briefcase me-2"></i>Employment Information
+                        </h6>
+
+                        <div class="row g-3">
+
+                            <div class="col-md-6">
+                                <label for="empDesignation" class="form-label fw-bold">
+                                    Designation <span class="required">*</span>
+                                </label>
+                                <select id="empDesignation" class="form-select" required>
+                                    <option value="" selected disabled>Select Designation</option>
+                                    <option value="Manager">Manager</option>
+                                    <option value="Cashier">Cashier</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="empStatus" class="form-label fw-bold">
+                                    Employee Status <span class="required">*</span>
+                                </label>
+                                <select id="empStatus" class="form-select" required>
+                                    <option value="" selected disabled>Select Employee Status</option>
+                                    <option value="Working">Working</option>
+                                    <option value="Resign">Resign</option>
+                                </select>
+                            </div>
+
+                        </div>
+
+                    </form>
+                </div>
+
+                <div class="modal-footer">
+
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                        Cancel
+                    </button>
+
+                    <button type="reset" form="employeeForm" class="btn btn-outline-secondary" id="resetEmployeeBtn">
+                        Reset
+                    </button>
+
+                    <button type="submit" form="employeeForm" class="btn btn-primary" id="saveEmployeeBtn">
+                        <i class="bi bi-person-plus me-1"></i>Register Employee
+                    </button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="Resourses/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+</body>
+
+</html>

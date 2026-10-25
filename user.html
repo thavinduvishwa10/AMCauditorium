@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Ave Maria Auditorium - Manager Dashboard</title>
+
+
+    <!-- Bootstrap CSS -->
+
+    <link href="Resourses/bootstrap-5.3.8-dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+
+    <!-- Bootstrap Icons -->
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css"
+          rel="stylesheet">
+
+
+    <style>
+
+        body {
+            background-color: #f5f7fa;
+        }
+
+        .carousel img {
+            height: 350px;
+            object-fit: cover;
+        }
+
+    </style>
+
+    <link rel="stylesheet" href="navbar.css">
+
+</head>
+
+
+<body>
+
+
+<!-- NAVBAR -->
+
+<nav class="navbar navbar-dark bg-primary ">
+
+    <div class="container-fluid">
+
+
+        <!-- THREE DOT BUTTON -->
+
+        <button class="btn btn-primary"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#managerMenu">
+
+            <i class="bi bi-three-dots-vertical fs-4"></i>
+
+        </button>
+
+
+
+        <!-- SYSTEM NAME -->
+
+        <span class="navbar-brand fw-bold d-flex align-items-center">
+
+            <img src="Resourses/images.jpg"
+                 alt="Ave Maria Logo"
+                 class="rounded-circle me-2"
+                 width="40"
+                 height="40">
+        
+            Ave Maria Auditorium
+        
+        </span>
+
+
+        <!-- PROFILE -->
+
+        <div class="dropdown ms-auto">
+
+            <button class="btn btn-primary dropdown-toggle"
+                    type="button"
+                    data-bs-toggle="dropdown">
+
+                <i class="bi bi-person-circle fs-4"></i>
+
+                Manager
+
+            </button>
+
+
+            <ul class="dropdown-menu dropdown-menu-end">
+
+                <li>
+
+                    <a class="dropdown-item" href="#">
+
+                        <i class="bi bi-person me-2"></i>
+
+                        My Profile
+
+                    </a>
+
+                </li>
+
+
+                
+
+                <li>
+                    <hr class="dropdown-divider">
+                </li>
+
+
+                <li>
+
+                    <a class="dropdown-item text-danger"
+                       href="login.html">
+
+                        <i class="bi bi-box-arrow-right me-2"></i>
+
+                        Logout
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+
+<!-- LEFT OFFCANVAS MENU -->
+
+<div class="offcanvas offcanvas-start" tabindex="-1" id="managerMenu">
+
+    <!-- Sidebar Header -->
+    <div class="offcanvas-header bg-primary text-white">
+
+        <div>
+            <h5 class="offcanvas-title fw-bold mb-1">
+                <i class="bi bi-building me-2"></i>
+                Ave Maria Auditorium
+            </h5>
+            <small>Manager Panel</small>
+        </div>
+
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close">
+        </button>
+
+    </div>
+
+    <!-- Sidebar Body -->
+    <div class="offcanvas-body p-0">
+
+        <div class="px-3 pt-3 pb-2">
+            <small class="text-secondary fw-semibold">MAIN MENU</small>
+        </div>
+
+        <div class="nav nav-pills flex-column gap-1 px-2">
+
+            <a href="dash.html" class="nav-link d-flex align-items-center gap-3">
+                <i class="bi bi-speedometer2 fs-5"></i>
+                Dashboard
+            </a>
+
+            <a href="facility_test.html" class="nav-link d-flex align-items-center gap-3">
+                <i class="bi bi-lightbulb fs-5"></i>
+                Facilities
+            </a>
+
+            <a href="customer.html" class="nav-link  d-flex align-items-center gap-3" aria-current="page">
+                <i class="bi bi-person-lines-fill fs-5"></i>
+                Customer Management
+            </a>
+
+            <a href="#" class="nav-link d-flex align-items-center gap-3">
+                <i class="bi bi-calendar-check fs-5"></i>
+                Reservation
+            </a>
+
+            <a href="#" class="nav-link d-flex align-items-center gap-3">
+                <i class="bi bi-calendar-check fs-5"></i>
+                Visit opintment
+            </a>
+
+            <a href="#" class="nav-link d-flex align-items-center gap-3">
+                <i class="bi bi-people fs-5"></i>
+                Staff Allocation
+            </a>
+
+            <div class="dropdown ">
+
+                <a href="#userAccessMenu"
+                   class="nav-link d-flex align-items-center gap-3"
+                   data-bs-toggle="collapse"
+                   role="button"
+                   aria-expanded="false">
+            
+                    <i class="bi bi-shield-lock fs-5"></i>
+                    User & Access Management
+                    <i class="bi bi-chevron-down ms-auto"></i>
+            
+                </a>
+            
+                <div class="collapse" id="userAccessMenu">
+            
+                    <div class="nav nav-pills flex-column gap-1 ps-4">
+            
+                        <a href="employee.html"
+                           class="nav-link d-flex align-items-center gap-3">
+                            <i class="bi bi-people fs-5"></i>
+                            Employee Management
+                        </a>
+            
+                        <a href="user.html"
+                           class="nav-link d-flex align-items-center gap-3">
+                            <i class="bi bi-person-lock fs-5"></i>
+                            User Management
+                        </a>
+            
+                        <a href="privilege.html"
+                           class="nav-link d-flex align-items-center gap-3">
+                            <i class="bi bi-shield-check fs-5"></i>
+                            Privilege Management
+                        </a>
+            
+                    </div>
+            
+                </div>
+            
+            </div>
+
+        </div>
+
+        <hr class="mx-3 my-3">
+
+        <div class="px-3 pb-2">
+            <small class="text-secondary fw-semibold">SUPPLIER MANAGEMENT</small>
+        </div>
+
+        <div class="nav nav-pills flex-column gap-1 px-2">
+
+            <a href="#" class="nav-link d-flex align-items-center gap-3">
+                <i class="bi bi-truck fs-5"></i>
+                Suppliers
+            </a>
+
+            <a href="#" class="nav-link d-flex align-items-center gap-3">
+                <i class="bi bi-clipboard-plus fs-5"></i>
+                Job Creation
+            </a>
+
+            <a href="#" class="nav-link d-flex align-items-center gap-3">
+                <i class="bi bi-clipboard-check fs-5"></i>
+                Job Completion
+            </a>
+
+            <a href="#" class="nav-link d-flex align-items-center gap-3">
+                <i class="bi bi-cash-stack fs-5"></i>
+                Supplier Payment
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+    <!-- USER MANAGEMENT TABLE -->
+    <div class="container-fluid p-3 p-md-4">
+
+        <div class="card shadow-sm">
+
+            <div class="card-header bg-primary text-white d-flex
+                justify-content-between align-items-center">
+
+                <h4 class="mb-0">User Management</h4>
+
+            </div>
+
+            <div class="card-body">
+
+                <div class="d-flex justify-content-between align-items-center
+                    mb-3 flex-wrap gap-2">
+
+                    <input type="search" id="searchUser"
+                        class="form-control w-auto"
+                        placeholder="Search users...">
+
+                    <button type="button" class="btn btn-outline-primary"
+                        data-bs-toggle="modal" data-bs-target="#userModal"
+                        id="addUserBtn">
+
+                        <i class="bi bi-plus-lg me-1"></i>Add User
+                    </button>
+
+                </div>
+
+                <div class="table-responsive">
+
+                    <table class="table table-striped table-hover
+                        table-bordered align-middle mb-0">
+
+                        <thead class="table-primary">
+                            <tr>
+                                <th>#</th>
+                                <th>Employee</th>
+                                <th>Username</th>
+                                <th>Email</th>
+                                <th>Role</th>
+                                <th>Status</th>
+                                <th>Modify</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="userTable">
+
+                            <tr>
+                                <td>1</td>
+                                <td>Thavindu Vishwa</td>
+                                <td>thavindu</td>
+                                <td>thavindu@example.com</td>
+                                <td>Manager</td>
+                                <td>
+                                    <span class="badge bg-success">Active</span>
+                                </td>
+                                <td class="text-center">
+                                    <div class="btn-group btn-group-sm">
+                                        <button type="button"
+                                            class="btn btn-outline-primary viewBtn">
+                                            View
+                                        </button>
+                                        <button type="button"
+                                            class="btn btn-outline-primary editBtn">
+                                            Edit
+                                        </button>
+                                        <button type="button"
+                                            class="btn btn-outline-danger deleteBtn">
+                                            Delete
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>2</td>
+                                <td>Kasun Perera</td>
+                                <td>kasun</td>
+                                <td>kasun@example.com</td>
+                                <td>Cashier</td>
+                                <td>
+                                    <span class="badge bg-success">Active</span>
+                                </td>
+                                <td class="text-center">
+                                    <div class="btn-group btn-group-sm">
+                                        <button type="button"
+                                            class="btn btn-outline-primary viewBtn">
+                                            View
+                                        </button>
+                                        <button type="button"
+                                            class="btn btn-outline-primary editBtn">
+                                            Edit
+                                        </button>
+                                        <button type="button"
+                                            class="btn btn-outline-danger deleteBtn">
+                                            Delete
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>3</td>
+                                <td>Tharindu Fernando</td>
+                                <td>tharindu</td>
+                                <td>tharindu@example.com</td>
+                                <td>Cashier</td>
+                                <td>
+                                    <span class="badge bg-secondary">Inactive</span>
+                                </td>
+                                <td class="text-center">
+                                    <div class="btn-group btn-group-sm">
+                                        <button type="button"
+                                            class="btn btn-outline-primary viewBtn">
+                                            View
+                                        </button>
+                                        <button type="button"
+                                            class="btn btn-outline-primary editBtn">
+                                            Edit
+                                        </button>
+                                        <button type="button"
+                                            class="btn btn-outline-danger deleteBtn">
+                                            Delete
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ADD / EDIT USER MODAL -->
+    <div class="modal fade" id="userModal" tabindex="-1"
+        aria-labelledby="userModalTitle" aria-hidden="true">
+
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+
+            <div class="modal-content">
+
+                <div class="modal-header bg-primary text-white">
+
+                    <h5 class="modal-title" id="userModalTitle">
+                        <i class="bi bi-person-lock me-2"></i>User Registration
+                    </h5>
+
+                    <button type="button" class="btn-close btn-close-white"
+                        data-bs-dismiss="modal" aria-label="Close"></button>
+
+                </div>
+
+                <div class="modal-body">
+
+                    <form id="userForm">
+
+                        <p class="text-end text-secondary">
+                            <span class="text-danger">*</span> Required fields
+                        </p>
+
+                        <!-- USER INFORMATION -->
+                        <h6 class="text-primary border-bottom pb-2 mb-3">
+                            <i class="bi bi-person-vcard me-2"></i>User Information
+                        </h6>
+
+                        <div class="row g-3 mb-4">
+
+                            <div class="col-md-6">
+                                <label for="usrEmployee" class="form-label fw-bold">
+                                    Employee <span class="text-danger">*</span>
+                                </label>
+
+                                <select id="usrEmployee" class="form-select" required>
+                                    <option value="" selected disabled>Select Employee</option>
+                                    <option value="Thavindu Vishwa">Thavindu Vishwa</option>
+                                    <option value="Kasun Perera">Kasun Perera</option>
+                                    <option value="Tharindu Fernando">Tharindu Fernando</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="usrUsername" class="form-label fw-bold">
+                                    Username <span class="text-danger">*</span>
+                                </label>
+
+                                <input type="text" id="usrUsername"
+                                    class="form-control" placeholder="Enter Username"
+                                    autocomplete="username" required>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="usrPassword" class="form-label fw-bold">
+                                    Password <span class="text-danger">*</span>
+                                </label>
+
+                                <input type="password" id="usrPassword"
+                                    class="form-control" placeholder="Enter Password"
+                                    autocomplete="new-password" required>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="usrConfirmPassword" class="form-label fw-bold">
+                                    Re-Type Password <span class="text-danger">*</span>
+                                </label>
+
+                                <input type="password" id="usrConfirmPassword"
+                                    class="form-control" placeholder="Re-Type Password"
+                                    autocomplete="new-password" required>
+                            </div>
+
+                            <div class="col-md-12">
+                                <label for="usrEmail" class="form-label fw-bold">
+                                    Email <span class="text-danger">*</span>
+                                </label>
+
+                                <input type="email" id="usrEmail"
+                                    class="form-control" placeholder="Enter Email"
+                                    autocomplete="email" required>
+                            </div>
+
+                        </div>
+
+                        <!-- ACCESS INFORMATION -->
+                        <h6 class="text-primary border-bottom pb-2 mb-3">
+                            <i class="bi bi-shield-lock me-2"></i>Access Information
+                        </h6>
+
+                        <div class="row g-3 mb-4">
+
+                            <div class="col-md-6">
+
+                                <label class="form-label fw-bold">
+                                    Role <span class="text-danger">*</span>
+                                </label>
+
+                                <div class="form-check">
+                                    <input type="radio" id="usrRoleManager"
+                                        name="usrRole" value="Manager"
+                                        class="form-check-input" required>
+
+                                    <label for="usrRoleManager"
+                                        class="form-check-label">
+                                        Manager
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input type="radio" id="usrRoleCashier"
+                                        name="usrRole" value="Cashier"
+                                        class="form-check-input">
+
+                                    <label for="usrRoleCashier"
+                                        class="form-check-label">
+                                        Cashier
+                                    </label>
+                                </div>
+
+                            </div>
+
+                            <div class="col-md-6">
+
+                                <label class="form-label fw-bold">
+                                    User Status
+                                </label>
+
+                                <div class="form-check form-switch mt-2">
+                                    <input type="checkbox" id="usrStatus"
+                                        name="usrStatus" value="Active"
+                                        class="form-check-input" role="switch" checked>
+
+                                    <label for="usrStatus" class="form-check-label">
+                                        User account is Active
+                                    </label>
+                                </div>
+
+                            </div>
+
+                            <div class="col-12">
+                                <label for="usrNote" class="form-label fw-bold">
+                                    Note (optional)
+                                </label>
+
+                                <textarea id="usrNote" class="form-control"
+                                    rows="3" placeholder="Enter additional notes"></textarea>
+                            </div>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+                <div class="modal-footer">
+
+                    <button type="button" class="btn btn-secondary"
+                        data-bs-dismiss="modal">
+                        Cancel
+                    </button>
+
+                    <button type="reset" form="userForm"
+                        class="btn btn-outline-secondary" id="resetUserBtn">
+                        Reset
+                    </button>
+
+                    <button type="submit" form="userForm"
+                        class="btn btn-primary" id="saveUserBtn">
+                        <i class="bi bi-person-plus me-1"></i>Register User
+                    </button>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="Resourses/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+</body>
+
+</html>

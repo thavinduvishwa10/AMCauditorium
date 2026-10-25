@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ave Maria Auditorium - Login</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="Resourses/bootstrap-5.3.8-dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- icon link -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body style="padding-top: 5%">
+
+
+    <!-- Main Login Container -->
+
+    <div class="login-container">
+
+
+        <!-- left-side -->
+
+        <div class="login-left">
+
+            <img src="Resourses/002.jpg" alt="Ave Maria Convent Auditorium">
+
+        </div>
+
+
+
+        <!-- right-side -->
+
+        <div class="login-right">
+
+
+            <!-- Login Title -->
+
+            <div class="login-title">
+
+                <i class="bi bi-person-circle"></i>
+
+                <h2>Login</h2>
+
+                <p>
+                    Ave Maria Convent Auditorium
+                </p>
+
+            </div>
+
+
+
+
+            <!-- form -->
+            <form>
+
+
+                <!-- username -->
+
+                <div class="mb-3">
+
+                    <label for="username" class="form-label">
+
+                        Username
+
+                    </label>
+
+
+                    <div class="input-group">
+
+                        <span class="input-group-text">
+
+                            <i class="bi bi-person"></i>
+
+                        </span>
+
+                        <input type="text" id="username" name="username" class="form-control"
+                            placeholder="Enter username" required>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- password -->
+
+                <div class="mb-3">
+
+                    <label for="password" class="form-label">
+
+                        Password
+
+                    </label>
+
+
+                    <div class="input-group">
+
+                        <span class="input-group-text">
+
+                            <i class="bi bi-lock"></i>
+
+                        </span>
+
+                        <input type="password" id="password" name="password" class="form-control"
+                            placeholder="Enter password" required>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- forget-password -->
+
+                <div class="text-end mb-4">
+
+                    <a href="#">
+                        Forgot Password?
+                    </a>
+
+                </div>
+
+
+
+                <!-- login btn -->
+
+                <div class="d-grid">
+
+                    <button type="button" class="btn btn-primary" onclick="fun()">
+
+                        <i class="bi bi-box-arrow-in-right"></i>
+
+                        Login
+
+                    </button>
+
+                </div>
+
+
+            </form>
+
+
+        </div>
+
+    </div>
+
+    <script>
+        // const loginForm = document.querySelector("form");
+
+        // loginForm.addEventListener("submit", function (event) {
+
+        //     event.preventDefault();
+
+        //     let username = document.getElementById("username").value;
+        //     let password = document.getElementById("password").value;
+
+        //     if (username === "thavindu" && password === "12345") {
+
+        //         window.location.href = "dash.html";
+
+        //     } else {
+
+        //         alert("Invalid username or password!");
+
+        //     }
+
+        // });
+
+        function fun() {
+
+            let name = document.getElementById("username").value;
+            let password = document.getElementById("password").value;
+
+            if (name === "thavindu" && password === "12345") {
+                 window.location.href = "dash.html";
+            }
+            // else {
+            //     alert("Invalid username or password!");
+            // }
+
+        }
+
+
+    </script>
+
+</body>
+
+</html>
